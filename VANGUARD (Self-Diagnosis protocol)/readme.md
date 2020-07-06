@@ -7,7 +7,7 @@
 
 ### Contents
 
-1. 초깃값 진단의 기준이 될 신뢰성 높은 차량 정보 Dataset 확보 과정 [/TestCase](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/TestCase)  
+1. 초깃값 진단의 기준이 될 신뢰성 높은 차량 정보 Dataset 확보 과정 [/TestCase](./TestCase)  
 
 2. Test Case를 기반으로 자율주행을 시작하기 전 1차 진단 [/Initializing Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Initializing%20Diagnosis)
 
