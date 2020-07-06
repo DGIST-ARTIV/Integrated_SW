@@ -65,7 +65,7 @@
 
 처음에는 dbw_cmd_node와 dbw_ioniq_node에서 publish되는 양방향의 topic들을 통합 SW에서 개발중인
 
-[매개노드(Mediating Node)](./DGIST-ARTIV/Integrated_SW/tree/master/ARTIV%20JOINT%20(Mediating%20Node))를 사용하여 일괄 publish하려고 하였다.
+[매개노드(Mediating Node)](../ARTIV%20JOINT%20(Mediating%20Node))를 사용하여 일괄 publish하려고 하였다.
 
 <br>
 
