@@ -114,7 +114,7 @@ Sensor State Diagnosis : 1과 2에서 vehicle info와 함께, sensor state에 �
  
 기존에 존재하는 ros_diagnotics 패키지를 참고하여 Vision팀의 Sensor state를 시작으로 모든 sensor의 state를 점검한다. (이구 담당)
 
- __[/Sensor State Diagnosis](/Sensor%20State%20Diagnosis)__
+ __[/Sensor State Diagnosis](./Sensor%20State%20Diagnosis)__
 
 ##
 
