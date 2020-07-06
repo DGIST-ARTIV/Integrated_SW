@@ -11,11 +11,11 @@
 
 2. Test Case를 기반으로 자율주행을 시작하기 전 1차 진단 [/Initializing Diagnosis](./Initializing%20Diagnosis/)
 
-3. 1차 진단을 통과하고, 자율주행에 돌입했을 때 실시간으로 차량의 모든 주요 상태 진단 [/Real-Time Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Real-Time%20Diagnosis)
+3. 1차 진단을 통과하고, 자율주행에 돌입했을 때 실시간으로 차량의 모든 주요 상태 진단 [/Real-Time Diagnosis](./Real-Time%20Diagnosis)
 
-4. sensor state에 대한 진단 [/Sensor State Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Sensor%20State%20Diagnosis)
+4. sensor state에 대한 진단 [/Sensor State Diagnosis](./Sensor%20State%20Diagnosis)
 
-5. VANGUARD 개발 과정에서 사용된 동시성 프로그래밍 [/Note about Python3 Concurrency Programming](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Concurrency%20Programming%20(Thread%20VS%20Multiprocessing))
+5. VANGUARD 개발 과정에서 사용된 동시성 프로그래밍 [/Note about Python3 Concurrency Programming](./Concurrency%20Programming%20(Thread%20VS%20Multiprocessing))
 
 ## Environment & Dependencies
 
