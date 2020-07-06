@@ -92,11 +92,11 @@ VANGUARD는 실시간 감시를 한다. 즉, 다른 프로세스가 오류나 �
  
  Test Case : 초깃값 진단의 기준이 될 신뢰성 높은 차량 정보 Dataset을 확보한다.
  
- __[/Test Case](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/TestCase)__
+ __[/Test Case](./TestCase)__
  
  Initializing Diagnosis : Test Case를 기반으로 자율주행을 시작하기 전 1차 진단
  
- __[/Initializing Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Initializing%20Diagnosis)__
+ __[/Initializing Diagnosis](./Initializing%20Diagnosis)__
  
 ##
 
@@ -104,7 +104,7 @@ VANGUARD는 실시간 감시를 한다. 즉, 다른 프로세스가 오류나 �
  
 Real-Time Diagnosis : 1차 진단을 통과하고, 자율주행에 돌입했을 때 실시간으로 차량의 모든 주요 상태 진단
 
-__[/Real-Time Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Real-Time%20Diagnosis)__
+__[/Real-Time Diagnosis](./Real-Time%20Diagnosis)__
 
 ##
 
@@ -114,7 +114,7 @@ Sensor State Diagnosis : 1과 2에서 vehicle info와 함께, sensor state에 �
  
 기존에 존재하는 ros_diagnotics 패키지를 참고하여 Vision팀의 Sensor state를 시작으로 모든 sensor의 state를 점검한다. (이구 담당)
 
- __[/Sensor State Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Sensor%20State%20Diagnosis)__
+ __[/Sensor State Diagnosis](./VANGUARD%20(Self-Diagnosis%20protocol)/Sensor%20State%20Diagnosis)__
 
 ##
 
@@ -126,7 +126,7 @@ Sensor State Diagnosis : 1과 2에서 vehicle info와 함께, sensor state에 �
   
   아래 링크에서는 VANGUARD 개발 과정에서 사용된 동시성 프로그래밍 개념을 다루었다.
   
-  __[/Concurrency Programming (Thread VS Multiprocessing)](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Concurrency%20Programming%20(Thread%20VS%20Multiprocessing))__
+  __[/Concurrency Programming (Thread VS Multiprocessing)](./Concurrency%20Programming%20(Thread%20VS%20Multiprocessing))__
  
 <br>
 
