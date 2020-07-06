@@ -9,7 +9,7 @@
 
 1. 초깃값 진단의 기준이 될 신뢰성 높은 차량 정보 Dataset 확보 과정 [/TestCase](./TestCase)  
 
-2. Test Case를 기반으로 자율주행을 시작하기 전 1차 진단 [/Initializing Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Initializing%20Diagnosis)
+2. Test Case를 기반으로 자율주행을 시작하기 전 1차 진단 [/Initializing Diagnosis](./Initializing%20Diagnosis)
 
 3. 1차 진단을 통과하고, 자율주행에 돌입했을 때 실시간으로 차량의 모든 주요 상태 진단 [/Real-Time Diagnosis](https://github.com/shinkansan/ARTIV/tree/master/integraedSW/VANGUARD%20(Self-Diagnosis%20protocol)/Real-Time%20Diagnosis)
 
