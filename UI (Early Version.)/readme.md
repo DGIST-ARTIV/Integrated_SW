@@ -1,8 +1,10 @@
 # User Interface
 
-pyqt5 기반 UI 만들 때 유용했던 매뉴얼 정리
+pyqt5 기반 UI 만들 때 유용했던 매뉴얼 정리집
 
 [/UI Manual](./UI%20Manual)
+
+##
 
 개발 초기에 한땀한땀 만든 UI가 궁금하다면~
 
