@@ -1,4 +1,8 @@
 ## ROS Log 관련 정리
+
+<p align="center">Author : Geonhee Sim</p>
+<p align="center">date : 2020.06.30.</p>
+
 ---
 통합 소프트웨어팀에서는 효율적인 디버깅과 후에 규모가 커질 자율주행 소프트웨어의 오류 관리와 통합 프로그램의 Time Sensitive 오류 감지/대처 능력을 위해서
 ROS에서 자체적으로 제공하는 로그기능을 사용하기 위한 방안을 마련함.
