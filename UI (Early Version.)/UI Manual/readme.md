@@ -4,4 +4,6 @@
 
 [2. QT Creator with ROS Workspace](./QT%20Creator%20with%20ROS%20Workspace.md)
 
-[3. qrc to rc.py](./pyqt101.md)
+[3. rqt BenchMarking](./RQT_BenchMarking.md)
+
+[4. qrc to rc.py](./pyqt101.md)
