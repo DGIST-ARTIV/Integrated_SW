@@ -5,3 +5,8 @@ ARTIV 개발에서 기존에 Thread를 사용해왔다면, 이를 Multiprocessin
 __참고 링크__
 
 [Thread와 Process의 차이](https://shoark7.github.io/programming/knowledge/difference-between-process-and-thread)
+
+[multiprocessing python docs](https://docs.python.org/ko/3/library/multiprocessing.html)
+
+[rclpy에서 multiprocessing 사용할 때의 유의점](https://github.com/ros2/rclpy/pull/328)
+
