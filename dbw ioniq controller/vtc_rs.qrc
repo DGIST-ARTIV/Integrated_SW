@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="photo">
+    <file>carTop</file>
+  </qresource>
+</RCC>
