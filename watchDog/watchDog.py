@@ -105,10 +105,10 @@ class alertScreen(QMainWindow, alert_window):
         self.pushButton.clicked.connect(self._exit)
 
         self.playlist = QMediaPlaylist()
-        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./autopilot_disconnect.mp3"))
+        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./warning_fx.mp3"))
         self.playlist.addMedia(QMediaContent(url))
 
-        self.timeout = 3500
+        self.timeout = 2000
 
 
         self.setStyleSheet("background-color:  #efefef;"
@@ -141,7 +141,7 @@ class alertScreen(QMainWindow, alert_window):
                       "border-radius: 3px")
 
         timer = QtCore.QTimer(self)
-        timer.setInterval(500)
+        timer.setInterval(400)
         timer.timeout.connect(self.blank)
         timer.start()
 
@@ -205,7 +205,7 @@ class logAlert(QMainWindow, form_window):
         centerPoint = PyQt5.QtWidgets.QApplication.desktop().screenGeometry(screen).center()
         frameGm.moveCenter(centerPoint)
         self.move(frameGm.topLeft())
-
+        self.dataPop = []
 
     def __init__(self):
         super().__init__()
@@ -218,9 +218,17 @@ class logAlert(QMainWindow, form_window):
         self.tableWidget.setRowCount(0)
         self.tableWidget.setHorizontalHeaderLabels(['내용', '심각도', '발생', '시간'])
 
+        self.tableWidget.setColumnWidth(0, 80)
+
+
         self.rosSub_class = rosSub()
         self.rosSub_class.start()
-        self.rosSub_class.data.connect(self.addRowandSet)
+        self.rosSub_class.data.connect(self.logUpdate)
+        self.rosSub_class.data.connect(self.showAlert)
+
+        displayUp = QTimer(self)
+        displayUp.start(500)
+        displayUp.timeout.connect(self.displayUpdate)
 
         self.pushButton.clicked.connect(self.snoozeAlarm)
         self.snoozeBool = False
@@ -251,6 +259,23 @@ class logAlert(QMainWindow, form_window):
         #header_item = QTableWidgetItem("추가")
         #header_item.setBackground(Qt.red) # 헤더 배경색 설정 --> app.setStyle() 설정해야만 작동한다. self.table.setHorizontalHeaderItem(2, header_item)
         #self.tableWidget.setHorizontalHeaderItem(2, header_item)
+
+    def displayUpdate(self):
+        for its in self.dataPop:
+            time.sleep(0.001)
+            self.addRowandSet(its)
+        self.dataPop = []
+
+    def logUpdate(self, _data):
+        #print(self.dataPop)
+        try:
+            if self.dataPop[-1][0] == 16 or self.dataPop[-1][0] == 50 and self.dataPop[-1][3] == _data[3]:
+                print("Skip same FATAL", self.dataPop[-1][2], _data[3], _data[2])
+                return
+        except:
+            pass
+        self.dataPop.append(_data)
+
     def putIcon(self, severity):
         iconList = ['SP_MessageBoxCritical',
                     'SP_MessageBoxInformation',
@@ -290,12 +315,27 @@ class logAlert(QMainWindow, form_window):
             self.pushButton.setText("Alarm : ON")
             self.snoozeBool = False
 
+    def showAlert(self, _data):
+        if _data[0] == 16 or _data[0] == 50:
+            _data[2] = "FATAL"
+        elif _data[0] == 8 or _data[0] == 40:
+            _data[2] = "ERROR"
 
+        if not self.snoozeBool:
+            #print(_data[2], _data[0])
+            if _data[2] == "FATAL" or _data[2] == "ERROR":
+                global aSshow
+                self.fatalCollector(_data)
+                if aSshow:
+
+                    self.aS = alertScreen()
+                    self.aS.show()
+                    aSshow = 0
     def addRowandSet(self, _data):
         # fileter for passing "INFO"
-       
+
         global aSshow
-        
+
         serverity = self.putIcon(_data[0])[1]
         _data[2] = serverity
 
@@ -306,15 +346,7 @@ class logAlert(QMainWindow, form_window):
         row_count = self.tableWidget.rowCount()
         self.tableWidget.setRowCount(row_count+1)
 
-        if not self.snoozeBool:
-            if _data[2] == "FATAL" or _data[2] == "ERROR":
-                global aSshow
-                self.fatalCollector(_data)
-                if aSshow:
 
-                    self.aS = alertScreen()
-                    self.aS.show()
-                    aSshow = 0
 
         meesage = QTableWidgetItem(_data[1])
         meesage.setIcon(self.putIcon(_data[0])[0])
@@ -331,11 +363,11 @@ class logAlert(QMainWindow, form_window):
         #self.tableWidget.setColumnWidth(2, 150)
         #self.tableWidget.setColumnWidth(3, 320)
         header = self.tableWidget.horizontalHeader()
-        header.setSectionResizeMode(0, QtWidgets.QHeaderView.ResizeToContents)
+        #header.setSectionResizeMode(0, QtWidgets.QHeaderView.ResizeToContents)
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
         header.setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeToContents)
         header.setSectionResizeMode(3, QtWidgets.QHeaderView.ResizeToContents)
-        self.tableWidget.setColumnWidth(0, 635)
+        self.tableWidget.setColumnWidth(0, 300)
         self.tableWidget.scrollToBottom()
 
     def fatalCollector(self, data):
