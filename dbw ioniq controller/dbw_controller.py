@@ -50,9 +50,9 @@ class MyWindow(QMainWindow, vtc):
         self.accelAct.setSingleStep(200)
         self.accelAct.setValue(650)
 
-        self.brakeAct.setRange(2000, 25000)
+        self.brakeAct.setRange(0, 29000)
         self.brakeAct.setSingleStep(1000)
-        self.brakeAct.setValue(2000)
+        self.brakeAct.setValue(0)
 
         #self.label_2.clicked.connect(self.accelAct.setValue(650))
         #self.label_2.clicked.connect(self.brakeAct.setValue(650))
@@ -63,7 +63,8 @@ class MyWindow(QMainWindow, vtc):
         self.horizontalScrollBar.valueChanged.connect(self.steerSet)
         self.pushButton_5.clicked.connect(self.allZero)
         self.pushButton_6.clicked.connect(self.steerZero)
-
+        self.pushButton.clicked.connect(self.publisher)
+       
         self.sN = subNode()
         self.sN.start()
 
@@ -71,7 +72,11 @@ class MyWindow(QMainWindow, vtc):
         self.pN.accelPub.publish(self._int(0))
         self.pN.brakePub.publish(self._int(0))
         self.pN.steerPub.publish(self._int(0))
-        self.pN.statusPub.publish(self._int(0))
+        self.pN.statusPub.publish(self._int(1))
+
+        self.pushButton_7.clicked.connect(self.setP)
+        self.pushButton_8.clicked.connect(self.setD)
+        self.pushButton_9.clicked.connect(self.setR)
 
         self.tableWidget.setSelectionMode(QAbstractItemView.SingleSelection)
         self.tableWidget.setRowCount(24)
@@ -96,10 +101,18 @@ class MyWindow(QMainWindow, vtc):
     def allZero(self):
         self.accelAct.setValue(0)
         self.brakeAct.setValue(0)
+        self.pN.statusPub.publish(self._int(1))
 
     def steerSet(self, steerAngle):
         self.label_8.setText(str(steerAngle))
         self.pN.steerPub.publish(self._int(steerAngle))
+
+    def setP(self):
+        self.pN.gearPub.publish(self._int(0))
+    def setR(self):
+        self.pN.gearPub.publish(self._int(7))
+    def setD(self):
+        self.pN.gearPub.publish(self._int(5))
 
 
     @pyqtSlot()
@@ -112,6 +125,18 @@ class MyWindow(QMainWindow, vtc):
 
             self.lcdNumber_3.display(self.sN.velocity)
             #self.label_8.setText(str(self.sN.infoList[3]))
+        
+            gearPosition = self.sN.infoList[2]
+ 
+            if gearPosition == 0:
+                self.label_10.setText("P")
+            elif gearPosition == 5:
+                self.label_10.setText("D")
+            elif gearPosition == 6:
+                self.label_10.setText("N")
+            elif gearPosition == 7:
+                self.label_10.setText("R")
+            
         except:
             pass
 
@@ -122,6 +147,8 @@ class MyWindow(QMainWindow, vtc):
         self, 'Confirmation', "You are now set Accel to over 2500\n ARE YOU SURE?", QMessageBox.Yes |  QMessageBox.No )
             if buttonReply ==  QMessageBox.No:
                 self.accelAct.setValue(2000)
+
+
         self.lcdNumber.display(self.accelAct.value())
         self.lcdNumber_2.display(self.brakeAct.value())
 
@@ -146,18 +173,19 @@ class MyWindow(QMainWindow, vtc):
         #print "3"
         self.pN.accelPub.publish(self._int(self.accelAct.value()))
         self.pN.brakePub.publish(self._int(self.brakeAct.value()))
+        self.pN.angularPub.publish(self._int(self.lineEdit_2.text()))
 
         #self.accelAct.setValue(self.accelAct.value()-50)
         #self.brakeAct.setValue(self.brakeAct.value()-500)
 
     def emBtn(self):
-        self.pN.brakePub.publish(self._int(14000))
+        self.pN.brakePub.publish(self._int(27000))
         rospy.logfatal("Emergency Stop!")
 
         buttonReply = QMessageBox.warning(
-        self, 'EMERGENCY PRESSED', "Heads up! Brace!\n Emergency Override Brake 14000 sended\n\n Press Ok to switch Manual Control")
+        self, 'EMERGENCY PRESSED', "Heads up! Brace!\n Emergency Override Brake 27000 sended\n\n Press Ok to switch Manual Control")
 
-        self.pN.statusPub.publish(self._int(1))
+        self.pN.statusPub.publish(self._int(0))
 
 
     def keyPressEvent(self, e):
