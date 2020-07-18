@@ -105,10 +105,10 @@ class alertScreen(QMainWindow, alert_window):
         self.pushButton.clicked.connect(self._exit)
 
         self.playlist = QMediaPlaylist()
-        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./warning_fx.mp3"))
+        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./warning32.mp3"))
         self.playlist.addMedia(QMediaContent(url))
 
-        self.timeout = 2000
+        self.timeout = 4000
 
 
         self.setStyleSheet("background-color:  #efefef;"
@@ -141,7 +141,7 @@ class alertScreen(QMainWindow, alert_window):
                       "border-radius: 3px")
 
         timer = QtCore.QTimer(self)
-        timer.setInterval(400)
+        timer.setInterval(100)
         timer.timeout.connect(self.blank)
         timer.start()
 
@@ -386,7 +386,9 @@ class rosSub(QThread):
     def run(self):
         self.node.create_subscription(Log, '/rosout', self.callback)
 
-        rclpy.spin(self.node)
+        while rclpy.ok():
+            rclpy.spin_once(self.node)
+            time.sleep(0.01)
 
 
 
