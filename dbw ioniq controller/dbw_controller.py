@@ -4,6 +4,7 @@ import rospy
 import os
 from time import sleep
 from std_msgs.msg import Int16, Float32MultiArray
+from std_msgs.msg import Int16MultiArray, String
 from sensor_msgs.msg import JointState
 
 from PyQt5.QtWidgets import *
@@ -61,10 +62,11 @@ class MyWindow(QMainWindow, vtc):
         self.brakeAct.valueChanged.connect(self.brakeVal)
         self.pushButton_4.clicked.connect(self.emBtn)
         self.horizontalScrollBar.valueChanged.connect(self.steerSet)
+        self.horizontalScrollBar_2.valueChanged.connect(self.jointSteer)
         self.pushButton_5.clicked.connect(self.allZero)
         self.pushButton_6.clicked.connect(self.steerZero)
         self.pushButton.clicked.connect(self.publisher)
-       
+
         self.sN = subNode()
         self.sN.start()
 
@@ -77,6 +79,8 @@ class MyWindow(QMainWindow, vtc):
         self.pushButton_7.clicked.connect(self.setP)
         self.pushButton_8.clicked.connect(self.setD)
         self.pushButton_9.clicked.connect(self.setR)
+
+        self.pushButton_10.clicked.connect(self.jointEmBtn)
 
         self.tableWidget.setSelectionMode(QAbstractItemView.SingleSelection)
         self.tableWidget.setRowCount(24)
@@ -92,8 +96,54 @@ class MyWindow(QMainWindow, vtc):
 
         self.checkBox.stateChanged.connect(self.chkPublisher)
 
+        # Cruise Button
+        self.pushButton_2.clicked.connect(self.cruiseUp)
+        self.pushButton_3.clicked.connect(self.cruiseDown)
+
+        self.pushButton_12.clicked.connect(self.jointEmBtn)
+        self.pushButton_11.clicked.connect(self.jointCruise)
+
 
         self.pubBool = False
+
+    def cruiseUp(self):
+        self.lineEdit.setText(str(float(self.lineEdit.text()) + 5))
+    def cruiseDown(self):
+        self.lineEdit.setText(str(float(self.lineEdit.text()) -5))
+
+    def jointEmBtn(self):
+        self.jointSender(0.0, 0, 0)
+
+    def jointCruise(self):
+        self.jointSender(1.0, float(self.lineEdit.text()), 0)
+
+    def jointSteer(self, msg):
+        self.jointSender(2.0, 0, float(msg))
+    def jointSender(self, mode, speed, steer):
+        data = Float32MultiArray()
+        data.data = [0.0] * 10
+
+        # Ioniq, ERP mode set
+        data.data[0] = 0.0
+
+
+        if mode==0.0:
+            print("Emergency activated")
+            data.data[1] = 0.0
+            data.data[4] = 17000.0 # Brake
+        if mode==1.0:
+            print("normal cruise control")
+            data.data[1] = 1.0
+            data.data[2] = float(speed)
+        if mode==2.0:
+            print("steer on cruise mode")
+            data.data[1] = 2.0
+            data.data[5] = float(steer)
+            data.data[7]
+
+        self.pN.jointPub.publish(data)
+
+
 
     def steerZero(self):
         self.horizontalScrollBar.setValue(0)
@@ -125,9 +175,9 @@ class MyWindow(QMainWindow, vtc):
 
             self.lcdNumber_3.display(self.sN.velocity)
             #self.label_8.setText(str(self.sN.infoList[3]))
-        
+
             gearPosition = self.sN.infoList[2]
- 
+
             if gearPosition == 0:
                 self.label_10.setText("P")
             elif gearPosition == 5:
@@ -136,9 +186,13 @@ class MyWindow(QMainWindow, vtc):
                 self.label_10.setText("N")
             elif gearPosition == 7:
                 self.label_10.setText("R")
-            
+
+
         except:
             pass
+
+        if self.sN.moveCarInfo != 0:
+            self.textBrowser.setText(str(self.sN.moveCarInfo))
 
     def accelVal(self):
         #self.brakeAct.setValue(2000)
@@ -196,8 +250,10 @@ class subNode(QThread):
         QThread.__init__(self)
         rospy.Subscriber('/Ioniq_info', Float32MultiArray, self.infoCb)
         rospy.Subscriber('/Joint_state', JointState, self.jointCb)
+        rospy.Subscriber('/move_car_info', String, self.moveCb)
         self.infoList = []
         self.velocity = 0
+        self.moveCarInfo = 0
 
     def run(self):
         while not rospy.core.is_shutdown():
@@ -211,6 +267,10 @@ class subNode(QThread):
         self.velocity = msg.velocity[0]
         pass
 
+    def moveCb(self, msg):
+        self.moveCarInfo = msg.data
+        pass
+
 class pubNode():
     def __init__(self):
         self.accelPub = rospy.Publisher(rootname+pubAccel, Int16, queue_size = 1)
@@ -219,6 +279,7 @@ class pubNode():
         self.steerPub = rospy.Publisher(rootname+pubSteer, Int16, queue_size = 1)
         self.gearPub = rospy.Publisher(rootname+pubGear, Int16, queue_size = 1)
         self.statusPub = rospy.Publisher(rootname+pubStatus, Int16, queue_size = 1)
+        self.jointPub = rospy.Publisher('/move_car', Float32MultiArray, queue_size = 1)
 
     def run(self):
         pass
