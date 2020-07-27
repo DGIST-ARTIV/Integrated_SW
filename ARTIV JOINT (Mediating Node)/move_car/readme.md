@@ -1,7 +1,7 @@
 # 간단한 매뉴얼
 
 __<structure of move_car for Ioniq>__
-[car_type = 0.0(Ioniq), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]\
+[car_type = 0.0(Ioniq), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
 
 사용법 : mode를 통한 차량 제어
 
