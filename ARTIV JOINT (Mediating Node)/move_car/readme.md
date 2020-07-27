@@ -23,3 +23,4 @@ move_car는 0번째 값으로 차량의 종류를 선택하여 move_Ioniq 또는
 
 그에 따라, 개발자의 편의를 위해 dbw_ioniq노드를 sub하여 callback 변수로 저장해두고, 현재 속도 및 move_car topic도 callback으로 받아온다. 개발자의 편의에 따라 사용하면 된다.
 
+또한, 현재 차량의 종류, 현재 모드, 현재 실제 속도를 /move_car_info topic을 통해 pub하므로, 편의에 맞게 사용하면 되겠다.
