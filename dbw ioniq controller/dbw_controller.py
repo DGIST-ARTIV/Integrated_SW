@@ -80,7 +80,7 @@ class MyWindow(QMainWindow, vtc):
         self.pushButton_8.clicked.connect(self.setD)
         self.pushButton_9.clicked.connect(self.setR)
 
-        self.pushButton_10.clicked.connect(self.jointEmBtn)
+        self.pushButton_10.clicked.connect(self.jointReset)
 
         self.tableWidget.setSelectionMode(QAbstractItemView.SingleSelection)
         self.tableWidget.setRowCount(24)
@@ -118,11 +118,15 @@ class MyWindow(QMainWindow, vtc):
         self.jointSender(1.0, float(self.lineEdit.text()), 0)
 
     def jointSteer(self, msg):
-        self.jointSender(2.0, 0, float(msg))
-    def jointSender(self, mode, speed, steer):
+        self.jointSender(4.0, -1.0, float(msg))
+
+    def jointReset(self):
+        self.jointSender(119.0)
+
+
+    def jointSender(self, mode=3.0, speed=0.0, steer = 0.0):
         data = Float32MultiArray()
         data.data = [0.0] * 10
-
         # Ioniq, ERP mode set
         data.data[0] = 0.0
 
@@ -131,16 +135,31 @@ class MyWindow(QMainWindow, vtc):
             print("Emergency activated")
             data.data[1] = 0.0
             data.data[4] = 17000.0 # Brake
-        if mode==1.0:
+        elif mode==1.0:
             print("normal cruise control")
             data.data[1] = 1.0
             data.data[2] = float(speed)
-        if mode==2.0:
+        elif mode==2.0:
             print("steer on cruise mode")
             data.data[1] = 2.0
+            data.data[2] = -1.0
+            data.data[5] = float(steer)
+            data.data[7] = float(self.lineEdit_2.text())
+        elif mode == 3.0:
+            print("Developer mode")
+            data.data[1] = 3.0
+
+        elif mode == 4.0:
+            data.data[1] = 4.0
+            data.data[2] = -1.0
             data.data[5] = float(steer)
             data.data[7] = float(self.lineEdit_2.text())
 
+        elif mode == 119.0:
+            print("Reset joint")
+            data = Float32MultiArray()
+            data.data = [0]
+            data.data[0] = 119.0
         self.pN.jointPub.publish(data)
 
 
