@@ -83,7 +83,7 @@ class Move_Ioniq(Node):
             car_type = ""
             if self.move_carmsg[0] == 0.0:
                 car_type = "Ioniq"
-            elif self.move_carmsg[1] == 1.0:
+            elif self.move_carmsg[0] == 1.0:
                 car_type = "ERP42"
 
             mode = ""
@@ -97,11 +97,12 @@ class Move_Ioniq(Node):
                 mode = "Developer Mode"
             elif self.move_carmsg[1] == 4.0:
                 mode = "Cruise Control with Developer Mode"
+
             else:
                 self.get_logger().warn("Wrong Mode for move_Ioniq!!!")
             move_car_info = String()
             move_car_info.data = f'Car Type : {self.move_carmsg[0]}. {car_type}\nMode : {self.move_carmsg[1]}. {mode}\nCurrent Speed: {self.cur_vel}'
-            self.MovecarInfoPub.publish(move_car_info) 
+            self.MovecarInfoPub.publish(move_car_info)
             self.get_logger().info('Publishing: "%s"' % move_car_info)
             
 
@@ -109,8 +110,10 @@ class Move_Ioniq(Node):
         self.cur_vel = msg.velocity[0]
 
         if self.mode_data[0] == 1.0 or self.mode_data[0] == 2.0 or self.mode_data[0] ==4.0: # for PID
+            self.mode_data[2], self.mode_data[3] = self.PID(self.mode_data[1])
             self.pub_accel(self.mode_data[2])
             self.pub_brake(self.mode_data[3])
+            self.mode_data[1] = self.prev_desired_vel
             self.get_logger().info(f"mode{self.mode_data[0]}. {self.mode_data[1]}km/h a: {self.mode_data[2]}, b: {self.mode_data[3]}")
            
     def info_callback(self, msg):
@@ -118,14 +121,21 @@ class Move_Ioniq(Node):
 
     # structure of move_car for Ioniq: [car_type = 0.0(Ioniq), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
     def move_car_callback(self, msg):
-        if self.prev_mode !=0.0:
+        self.get_logger().info(f"{msg.data}")
+        if self.prev_mode == 119.0 and len(msg.data) ==1: #reset many times
+            self.prev_mode = 119.0
+        elif len(msg.data) == 1: #reset after cruise 
+            self.prev_mode = 119.0
+
+        elif self.prev_mode !=0.0:
             self.prev_mode = msg.data[1]
             self.move_carmsg = msg.data #debug
             self.get_logger().info(f"{self.move_carmsg}") #dubug
             mode = msg.data[1]
 
             if mode ==0.0: #E-STOP
-                self.get_logger().info(f"E-STOP Publishing Actuator with mode{mode}")
+                self.mode_data[0] = 0.0
+                self.get_logger().warn(f"E-STOP Publishing Actuator with mode{mode}")
                 self.emergency_stop(msg)
 
             elif mode == 1.0: #cruise control
@@ -139,6 +149,7 @@ class Move_Ioniq(Node):
                 self.cruise_control(msg)
 
             elif mode == 3.0: # mode that you can directly publish cmd value (for develper mode.)
+                self.mode_data[0] = 3.0                
                 accel = msg.data[3]
                 brake = msg.data[4]
                 steer = msg.data[5]
@@ -159,12 +170,17 @@ class Move_Ioniq(Node):
                 self.pub_steer(steer)
                 self.pub_gear(gear)            
 
-            elif mode == 5.0: #rapid acceleration
+            elif mode == 5.0: # cruise control without
                 pass
+                
 
         elif self.prev_mode == 0.0:
-            if len(msg) == 1 and msg.data[0] ==119.0: #escape code [119.0]
+
+            if msg.data[0] ==119.0: #escape code [119.0]
                 self.prev_mode = 119.0
+                self.get_logger().info("Escape!")
+            else:
+                self.get_logger().info(f"Stucked in E-Stop! {msg.data}")
             
             
 
@@ -240,6 +256,9 @@ class Move_Ioniq(Node):
 
     #mode 1. Cruise Control
     def PID(self,desired_vel):
+
+        if desired_vel == -1.0:
+            desired_vel = self.prev_desired_vel
         
         # When desired velocity is changed, prev_error and error_i should be reset! 
         if desired_vel != self.prev_desired_vel:
@@ -303,7 +322,7 @@ class Move_Ioniq(Node):
         return 0, 0
 
     def cruise_control(self,msg):
-        self.mode_data = [msg.data[1], msg.data[2]] + list(self.PID(msg.data[2]))
+        self.mode_data = [msg.data[1], msg.data[2], 0.0, 0.0]
                  
 def main(args=None):
     rclpy.init(args=args)
