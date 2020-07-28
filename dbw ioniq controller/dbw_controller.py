@@ -139,7 +139,7 @@ class MyWindow(QMainWindow, vtc):
             print("steer on cruise mode")
             data.data[1] = 2.0
             data.data[5] = float(steer)
-            data.data[7]
+            data.data[7] = float(self.lineEdit_2.text())
 
         self.pN.jointPub.publish(data)
 
