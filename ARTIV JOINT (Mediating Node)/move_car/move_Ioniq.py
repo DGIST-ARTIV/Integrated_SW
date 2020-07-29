@@ -189,7 +189,7 @@ class Move_Ioniq(Node):
 
         elif self.prev_mode == 0.0:
 
-            if msg.data[0] ==119.0: #escape code [119.0]
+            if len(msg.data) == 1 and msg.data[0] ==119.0: #escape code [119.0]
                 self.prev_mode = 119.0
                 self.get_logger().info("Escape!")
             else:
