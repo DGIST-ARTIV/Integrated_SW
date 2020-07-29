@@ -1,3 +1,5 @@
+# 2020.07.29.
+
 # structure of move_car for Ioniq: [car_type = 0.0(Ioniq), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
 
 #for PID
@@ -40,7 +42,7 @@ class Move_Ioniq(Node):
         self.cur_vel = 0.0 # JointState
         self.move_carmsg = [] #move_car(debug)
         self.move_car_info = "" #move_car_info
-        self.prev_mode = 119.0
+        self.prev_mode = 200.0
 
         # About PID
         self.cur_time = time.time()
@@ -122,56 +124,67 @@ class Move_Ioniq(Node):
     # structure of move_car for Ioniq: [car_type = 0.0(Ioniq), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
     def move_car_callback(self, msg):
         self.get_logger().info(f"{msg.data}")
-        if self.prev_mode == 119.0 and len(msg.data) ==1: #reset many times
+        if self.prev_mode == 200.0 and len(msg.data) ==1 and msg.data[0] == 119.0: #case 0. when the reset code is the first published code
+            self.prev_mode == 119.0
+            self.get_logger().warn("You published E-Stop reset code as the first topic!")
+ 
+        elif self.prev_mode == 119.0 and len(msg.data) ==1 and msg.data[0] == 119.0: #case 1. reset many times repeatly
             self.prev_mode = 119.0
-        elif len(msg.data) == 1: #reset after cruise 
+            self.get_logger().warn("Don't reset too much!")
+
+        elif self.prev_mode !=0.0 and len(msg.data) == 1 and msg.data[0] == 119.0: #case 2. reset after other modes except E-Stop mode 
             self.prev_mode = 119.0
+            self.get_logger().warn("Reset after other modes except E-Stop mode.")
 
         elif self.prev_mode !=0.0:
-            self.prev_mode = msg.data[1]
-            self.move_carmsg = msg.data #debug
-            self.get_logger().info(f"{self.move_carmsg}") #dubug
-            mode = msg.data[1]
 
-            if mode ==0.0: #E-STOP
-                self.mode_data[0] = 0.0
-                self.get_logger().warn(f"E-STOP Publishing Actuator with mode{mode}")
-                self.emergency_stop(msg)
+            if len(msg.data) != 10 or msg.data[0] != 0.0: #wrong topics
+                self.get_logger().warn(f"You published wrong!!! {msg.data}")
+            else:
+                self.prev_mode = msg.data[1]
+                self.move_carmsg = msg.data #debug
+                self.get_logger().info(f"{self.move_carmsg}") #dubug
+                mode = msg.data[1]
 
-            elif mode == 1.0: #cruise control
-                self.cruise_control(msg)
+                if mode ==0.0: #E-STOP
+                    self.mode_data[0] = 0.0
+                    self.get_logger().warn(f"E-STOP Publishing Actuator with mode{mode}")
+                    self.emergency_stop(msg)
 
-            elif mode == 2.0: #cruise control with steering
-                steer = msg.data[5]
-                angular = msg.data[7]
-                self.pub_angular(angular)
-                self.pub_steer(steer)
-                self.cruise_control(msg)
+                elif mode == 1.0: #cruise control
+                    self.cruise_control(msg)
 
-            elif mode == 3.0: # mode that you can directly publish cmd value (for develper mode.)
-                self.mode_data[0] = 3.0                
-                accel = msg.data[3]
-                brake = msg.data[4]
-                steer = msg.data[5]
-                gear = msg.data[6]
-                angular = msg.data[7]
-                self.pub_accel(accel)
-                self.pub_brake(brake)
-                self.pub_angular(angular)
-                self.pub_steer(steer)
-                self.pub_gear(gear)
+                elif mode == 2.0: #cruise control with steering
+                    steer = msg.data[5]
+                    angular = msg.data[7]
+                    self.pub_angular(angular)
+                    self.pub_steer(steer)
+                    self.cruise_control(msg)
 
-            elif mode == 4.0: # mode 1.0 + mode 3.0 (cruise control and direct publish except accel and brake)
-                steer = msg.data[5]
-                gear = msg.data[6]
-                angular = msg.data[7]
-                self.cruise_control(msg)
-                self.pub_angular(angular)
-                self.pub_steer(steer)
-                self.pub_gear(gear)            
+                elif mode == 3.0: # mode that you can directly publish cmd value (for develper mode.)
+                    self.mode_data[0] = 3.0                
+                    accel = msg.data[3]
+                    brake = msg.data[4]
+                    steer = msg.data[5]
+                    gear = msg.data[6]
+                    angular = msg.data[7]
+                    self.pub_accel(accel)
+                    self.pub_brake(brake)
+                    self.pub_angular(angular)
+                    self.pub_steer(steer)
+                    self.pub_gear(gear)
 
-            elif mode == 5.0: # cruise control without
-                pass
+                elif mode == 4.0: # mode 1.0 + mode 3.0 (cruise control and direct publish except accel and brake)
+                    steer = msg.data[5]
+                    gear = msg.data[6]
+                    angular = msg.data[7]
+                    self.cruise_control(msg)
+                    self.pub_angular(angular)
+                    self.pub_steer(steer)
+                    self.pub_gear(gear)            
+
+                elif mode == 5.0: # cruise control without
+                    pass
                 
 
         elif self.prev_mode == 0.0:
@@ -181,7 +194,11 @@ class Move_Ioniq(Node):
                 self.get_logger().info("Escape!")
             else:
                 self.get_logger().info(f"Stucked in E-Stop! {msg.data}")
-            
+
+        else:
+            self.get_logger().warn(f"Not Valid Message!!! {msg.data}")
+
+
             
 
     # Basic cmd publisher
