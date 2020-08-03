@@ -3,17 +3,30 @@
 __<structure of move_car for Ioniq>__
 [car_type = 0.0(Ioniq), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
 
+__<structure of move_car for ERP42>__
+[car_type = 1.0(ERP42), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
+
 사용법 : mode를 통한 차량 제어
 
 
 ## 설명
 
-move_car는 0번째 값으로 차량의 종류를 선택하여 move_Ioniq 또는 move_ERP42 노드를 키고, 지속적으로 move_car topic을 받아와서 차량을 제어한다.
+0번째 값 : 0.0 or 1.0 >> 차량의 종류를 선택
 
-그에 따라, 개발자의 편의를 위해 dbw_ioniq노드를 sub하여 callback 변수로 저장해두고, 현재 속도 및 move_car topic도 callback으로 받아온다. 개발자의 편의에 따라 사용하면 된다.
+1번째 값 : mode 선택
 
-또한, 현재 차량의 종류, 현재 모드, 현재 실제 속도를 /move_car_info topic을 통해 pub하므로, 편의에 맞게 사용하면 되겠다.
+2번째 값 : cruise control일 때, 속도 선택 (km/h)
 
-아래 링크에 자세한 매뉴얼이 있다. 꼭 정독해보자. 또 물어보거나 뭐 새로 만들어달라하면 죽일거다. ~~#이승기~~
+3번째 ~ 9번째 값 : cmd 노드를 통해 직접 넣을 수 있었던 여타 값들
+
+__$ 주의 사항 $__
+
+msg를 Float32MultiArray를 사용하므로, 사용하지 않는 값이더라도 0.0과 같은 쓰레기값을 채우고, 마지막 인덱스까지 다 쓰레깃값으로 채울 것!
+
+예시 : Ioniq을 속도 20km/h로 cruise control하고 핸들은 운전자가 제어하는 상황
+
+>> MCmsg.data = [0.0,1.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+
+자세한 사항은 아래 매뉴얼을 참고!
 
 [move_Ioniq 매뉴얼](https://docs.google.com/document/d/1AxAMeq6Xrgb8W50JrqpNWJELcRYVBZaxbXu9biplyvI/edit?usp=sharing)
