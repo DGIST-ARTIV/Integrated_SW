@@ -1,4 +1,4 @@
-# 2020.08.19.
+# 2020.08.20.
 
 # structure of move_car for ERP42: [car_type = 1.0(ERP42), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
 
@@ -11,16 +11,17 @@ from rclpy.node import Node
 from rclpy.qos import qos_profile_default
 from std_msgs.msg import Int16
 from std_msgs.msg import Float32MultiArray
-from sensor_msgs.msg import JointState
+from std_msgs.msg import Float64
 from std_msgs.msg import String
 
+pid_speed_limit = 7.0
 
 NODENAME = "move_ERP42"
 
 #subscribed topics
 topic_Movecar = '/move_car'
 topic_Info = '/ERP42_info'
-topic_JointState = '/JointState'
+topic_GpsSpd = '/gps_spd'
 topic_NavPilot = '/mission_manager/nav_pilot' 
 
 #topics to be published
@@ -42,7 +43,7 @@ class Move_ERP42(Node):
 
         #callback data
         self.infomsg = []     # ERP42_info
-        self.cur_vel = 0.0    # JointState
+        self.cur_vel = 0.0    # GPS_SPEED
         self.move_carmsg = [] # move_car(debug)
         self.move_car_info = "" #move_car_info
         self.prev_mode = 200.0
@@ -54,7 +55,7 @@ class Move_ERP42(Node):
         self.cur_time = time.time()
         self.prev_time = 0
         self.del_time = 0
-        self.kp = 10
+        self.kp = 15
         self.ki = 3
         self.kd = 2
         self.error_p = 0
@@ -74,8 +75,8 @@ class Move_ERP42(Node):
         self.estopPub = self.create_publisher(Int16, rootname + topic_Estop, qos_profile_default)
 
         # Initializing dbw_erp42_node subscriber
-        self.JointSub = self.create_subscription(JointState, topic_JointState, self.joint_callback, qos_profile_default)
-        self.JointSub
+        self.GpsSpdSub = self.create_subscription(Float64, topic_GpsSpd, self.gps_spd_callback, qos_profile_default)
+        self.GpsSpdSub
         self.InfoSub = self.create_subscription(Float32MultiArray, topic_Info, self.info_callback, qos_profile_default)
         self.InfoSub
 
@@ -125,8 +126,8 @@ class Move_ERP42(Node):
             self.MovecarInfoPub.publish(move_car_info)
             self.get_logger().info('Publishing: "%s"' % move_car_info)
 
-    def joint_callback(self, msg):
-        self.cur_vel = msg.velocity[0]
+    def gps_spd_callback(self, msg):
+        self.cur_vel = msg.data
 
         if self.mode_data[0] == 1.0 or self.mode_data[0] == 2.0 or self.mode_data[0] ==4.0: # for PID
             self.mode_data[2], self.mode_data[3] = self.PID(self.mode_data[1])
@@ -135,14 +136,14 @@ class Move_ERP42(Node):
             self.mode_data[1] = self.prev_desired_vel
             self.get_logger().info(f"cruise_mode{self.mode_data[0]}. {self.mode_data[1]}km/h a: {self.mode_data[2]}, b: {self.mode_data[3]}")
 
-        elif self.tartget_speed <= 5.0 and self.mode_data[0] == 5.0:
+        elif self.tartget_speed <= pid_speed_limit and self.mode_data[0] == 5.0:
             self.mode_data[2], self.mode_data[3] = self.PID(self.mode_data[1])
             self.pub_accel(self.mode_data[2])
             self.pub_brake(self.mode_data[3])   
             self.mode_data[1] = self.prev_desired_vel
             self.get_logger().info(f"cruise_mode{self.mode_data[0]}. {self.mode_data[1]}km/h a: {self.mode_data[2]}, b: {self.mode_data[3]}")
 
-        elif self.tartget_speed <= 5.0 and self.mode_data[0] == 6.0:
+        elif self.tartget_speed <= pid_speed_limit and self.mode_data[0] == 6.0:
             self.mode_data[2], self.mode_data[3] = self.PID(self.mode_data[1])
             self.pub_accel(self.mode_data[2])
             self.pub_brake(self.mode_data[3])   
@@ -180,13 +181,13 @@ class Move_ERP42(Node):
                     steer = msg.data[5]
                     gear = msg.data[6]
                     speed = msg.data[2]
-                    if speed > 5.0:
+                    if speed > pid_speed_limit:
                         self.mode_data[0] = 6.0
-                        self.pub_accel(speed)
+                        self.pub_accel(speed*10)
                         self.prev_error = 0
                         self.error_i = 0
                         self.prev_desired_vel = 0
-                    elif speed <= 5.0:
+                    elif speed <= pid_speed_limit:
                         self.cruise_control(msg)
 
                     self.pub_steer(steer)
@@ -265,13 +266,13 @@ class Move_ERP42(Node):
                         steer = msg.data[5]
                         gear = msg.data[6]
                         self.tartget_speed = msg.data[2]
-                        if self.tartget_speed > 5.0:
+                        if self.tartget_speed > pid_speed_limit:
                             self.mode_data[0] = 5.0
                             self.pub_accel(self.tartget_speed*10)
                             self.prev_error = 0
                             self.error_i = 0
                             self.prev_desired_vel = 0
-                        elif self.tartget_speed <= 5.0:
+                        elif self.tartget_speed <= pid_speed_limit:
                             self.cruise_control(msg)
 
                         self.pub_steer(steer)
@@ -287,13 +288,13 @@ class Move_ERP42(Node):
                     steer = self.temp_nav_pilotmsg[5]
                     gear = self.temp_nav_pilotmsg[6]
                     self.tartget_speed = msg.data[2]
-                    if self.tartget_speed > 5.0:
+                    if self.tartget_speed > pid_speed_limit:
                         self.mode_data[0] = 6.0
                         self.pub_accel(self.tartget_speed*10)
                         self.prev_error = 0
                         self.error_i = 0
                         self.prev_desired_vel = 0
-                    elif self.tartget_speed <= 5.0:
+                    elif self.tartget_speed <= pid_speed_limit:
                         self.cruise_control(msg)
 
                     self.pub_steer(steer)
@@ -428,12 +429,12 @@ class Move_ERP42(Node):
         pid_out = self.kp*self.error_p + self.ki*self.error_i + self.kd*self.error_d
         self.pid_out = pid_out
 
-        '''
-        if pid_out > 1000:
-            pid_out = 1000
-        elif pid_out < -1000:
-            pid_out = -1000
-        '''
+        
+        if pid_out > 500:
+            pid_out = 500
+        elif pid_out < -500:
+            pid_out = -500
+
 
         self.prev_error = self.error_p # Feedback current error
         self.prev_time = self.cur_time # Feedback current time
@@ -443,7 +444,7 @@ class Move_ERP42(Node):
         if pid_out > 0:
             for i in range(2001):
                if i <= 0.5*pid_out < i+1:
-                    gaspedal = 5*i
+                    gaspedal = 2*i
                     if gaspedal >= 200:
                         gaspedal = 200
                         return int(gaspedal), 0
@@ -455,7 +456,7 @@ class Move_ERP42(Node):
         elif pid_out < 0:
             for i in range(2001):
                 if i <= 0.5*abs(pid_out) < i+1:
-                    return 0, 5*i
+                    return 0, 2*i
 
         return 0, 0
 
