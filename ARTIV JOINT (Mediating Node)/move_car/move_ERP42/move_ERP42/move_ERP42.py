@@ -267,7 +267,7 @@ class Move_ERP42(Node):
                         self.tartget_speed = msg.data[2]
                         if self.tartget_speed > 5.0:
                             self.mode_data[0] = 5.0
-                            self.pub_accel(self.tartget_speed)
+                            self.pub_accel(self.tartget_speed*10)
                             self.prev_error = 0
                             self.error_i = 0
                             self.prev_desired_vel = 0
@@ -289,7 +289,7 @@ class Move_ERP42(Node):
                     self.tartget_speed = msg.data[2]
                     if self.tartget_speed > 5.0:
                         self.mode_data[0] = 6.0
-                        self.pub_accel(self.tartget_speed)
+                        self.pub_accel(self.tartget_speed*10)
                         self.prev_error = 0
                         self.error_i = 0
                         self.prev_desired_vel = 0
