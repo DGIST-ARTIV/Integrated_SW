@@ -1,4 +1,4 @@
-# 2020.07.30.
+# 2020.08.19.
 
 # structure of move_car for ERP42: [car_type = 1.0(ERP42), mode, speed, accel, brake, steer, gear, angular(Ioniq), status(ERP42), estop(ERP42)]
 
@@ -14,12 +14,14 @@ from std_msgs.msg import Float32MultiArray
 from sensor_msgs.msg import JointState
 from std_msgs.msg import String
 
+
 NODENAME = "move_ERP42"
 
 #subscribed topics
 topic_Movecar = '/move_car'
 topic_Info = '/ERP42_info'
-topic_JointState = '/Joint_state'
+topic_JointState = '/JointState'
+topic_NavPilot = '/mission_manager/nav_pilot' 
 
 #topics to be published
 topic_MovecarInfo = '/move_car_info'
@@ -44,19 +46,22 @@ class Move_ERP42(Node):
         self.move_carmsg = [] # move_car(debug)
         self.move_car_info = "" #move_car_info
         self.prev_mode = 200.0
+        self.nav_pilot_switch = 2
+        self.temp_nav_pilotmsg = []
 
         # About PID
+        self.tartget_speed = 0.0
         self.cur_time = time.time()
         self.prev_time = 0
         self.del_time = 0
-        self.kp = 1.25
-        self.ki = 0.75
-        self.kd = 1
+        self.kp = 10
+        self.ki = 3
+        self.kd = 2
         self.error_p = 0
         self.error_i = 0
         self.error_d = 0
         self.prev_error = 0
-        self.antiwindup = 70
+        self.antiwindup = 40.0
         self.prev_desired_vel = 0
         self.mode_data = [None] * 4
 
@@ -74,6 +79,10 @@ class Move_ERP42(Node):
         self.InfoSub = self.create_subscription(Float32MultiArray, topic_Info, self.info_callback, qos_profile_default)
         self.InfoSub
 
+        # Initializing Navigation Pilot switch subscriber
+        self.NavPilotSub = self.create_subscription(Int16, topic_NavPilot, self.nav_pilot_callback, qos_profile_default)
+        self.NavPilotSub
+
         # Initializing move_car topic subscriber
         self.move_carSub = self.create_subscription(Float32MultiArray, topic_Movecar, self.move_car_callback, qos_profile_default)
         self.move_carSub
@@ -81,6 +90,9 @@ class Move_ERP42(Node):
         # Initializing move_car_info topic publisher (depends on move_car callback)
         self.MovecarInfoPub = self.create_publisher(String, topic_MovecarInfo, qos_profile_default)
         self.timer = self.create_timer(0.5, self.timer_callback)
+
+    def nav_pilot_callback(self, msg):
+        self.nav_pilot_switch = msg.data        
 
     def timer_callback(self):
         if len(self.move_carmsg)!=0:
@@ -101,9 +113,13 @@ class Move_ERP42(Node):
                 mode = "Developer Mode"
             elif self.move_carmsg[1] == 4.0:
                 mode = "Cruise Control with Developer Mode"
-
+            elif self.move_carmsg[1] == 5.0:
+                mode = "Navigation Pilot Mode"
+            elif self.move_carmsg[1] == 6.0:
+                mode = "Mission Manager Mode"
             else:
-                self.get_logger().warn("Wrong Mode for move_Ioniq!!!")
+                self.get_logger().warn("Wrong Mode for move_ERP42!!!")
+
             move_car_info = String()
             move_car_info.data = f'Car Type : {self.move_carmsg[0]}. {car_type}\nMode : {self.move_carmsg[1]}. {mode}\nCurrent Speed: {self.cur_vel}'
             self.MovecarInfoPub.publish(move_car_info)
@@ -117,7 +133,21 @@ class Move_ERP42(Node):
             self.pub_accel(self.mode_data[2])
             self.pub_brake(self.mode_data[3])   
             self.mode_data[1] = self.prev_desired_vel
-            self.get_logger().info(f"mode{self.mode_data[0]}. {self.mode_data[1]}km/h a: {self.mode_data[2]}, b: {self.mode_data[3]}")
+            self.get_logger().info(f"cruise_mode{self.mode_data[0]}. {self.mode_data[1]}km/h a: {self.mode_data[2]}, b: {self.mode_data[3]}")
+
+        elif self.tartget_speed <= 5.0 and self.mode_data[0] == 5.0:
+            self.mode_data[2], self.mode_data[3] = self.PID(self.mode_data[1])
+            self.pub_accel(self.mode_data[2])
+            self.pub_brake(self.mode_data[3])   
+            self.mode_data[1] = self.prev_desired_vel
+            self.get_logger().info(f"cruise_mode{self.mode_data[0]}. {self.mode_data[1]}km/h a: {self.mode_data[2]}, b: {self.mode_data[3]}")
+
+        elif self.tartget_speed <= 5.0 and self.mode_data[0] == 6.0:
+            self.mode_data[2], self.mode_data[3] = self.PID(self.mode_data[1])
+            self.pub_accel(self.mode_data[2])
+            self.pub_brake(self.mode_data[3])   
+            self.mode_data[1] = self.prev_desired_vel
+            self.get_logger().info(f"cruise_mode{self.mode_data[0]}. {self.mode_data[1]}km/h a: {self.mode_data[2]}, b: {self.mode_data[3]}")
 
     def info_callback(self, msg):
         self.infomsg = msg.data
@@ -126,7 +156,7 @@ class Move_ERP42(Node):
     def move_car_callback(self, msg):
         self.get_logger().info(f"{msg.data}")
         if self.prev_mode == 200.0 and len(msg.data) ==1 and msg.data[0] == 119.0: #case 0. when the reset code is the first published code
-            self.prev_mode == 119.0
+            self.prev_mode = 119.0
             self.get_logger().warn("You published E-Stop reset code as the first topic!")
  
         elif self.prev_mode == 119.0 and len(msg.data) ==1 and msg.data[0] == 119.0: #case 1. reset many times repeatly
@@ -142,20 +172,47 @@ class Move_ERP42(Node):
             if len(msg.data) != 10 or msg.data[0] != 1.0: #wrong topics
                 self.get_logger().warn(f"You published wrong!!! {msg.data}")
             else:
-                self.prev_mode = msg.data[1]
-                self.move_carmsg = msg.data #debug
-                self.get_logger().info(f"{self.move_carmsg}") #dubug
                 mode = msg.data[1]
 
-                if mode ==0.0: #E-STOP
+                if self.nav_pilot_switch == 0 and mode == 6.0: # mission manager mode
+                    if self.prev_mode == 119.0:
+                        self.emergency_stop_off()
+                    steer = msg.data[5]
+                    gear = msg.data[6]
+                    speed = msg.data[2]
+                    if speed > 5.0:
+                        self.mode_data[0] = 6.0
+                        self.pub_accel(speed)
+                        self.prev_error = 0
+                        self.error_i = 0
+                        self.prev_desired_vel = 0
+                    elif speed <= 5.0:
+                        self.cruise_control(msg)
+
+                    self.pub_steer(steer)
+                    self.pub_gear(gear)
+                    self.prev_mode = msg.data[1]
+                    self.move_carmsg = msg.data #debug
+                    self.get_logger().info(f"{self.move_carmsg}") #dubug
+
+                elif mode ==0.0: #E-STOP
                     self.get_logger().warn(f"E-STOP Publishing Actuator with mode{mode}")
                     self.emergency_stop_on()
                     self.mode_data[0] = 0.0
+                    self.prev_mode = msg.data[1]
+                    self.move_carmsg = msg.data #debug
+                    self.get_logger().info(f"{self.move_carmsg}") #dubug
+                    self.prev_error = 0
+                    self.error_i = 0
+                    self.prev_desired_vel = 0
 
                 elif mode == 1.0: #cruise control
                     if self.prev_mode == 119.0:
                         self.emergency_stop_off()
                     self.cruise_control(msg)
+                    self.prev_mode = msg.data[1]
+                    self.move_carmsg = msg.data #debug
+                    self.get_logger().info(f"{self.move_carmsg}") #dubug
 
                 elif mode == 2.0: #cruise control with steering
                     if self.prev_mode == 119.0:
@@ -163,6 +220,9 @@ class Move_ERP42(Node):
                     steer = msg.data[5]
                     self.pub_steer(steer)
                     self.cruise_control(msg)
+                    self.prev_mode = msg.data[1]
+                    self.move_carmsg = msg.data #debug
+                    self.get_logger().info(f"{self.move_carmsg}") #dubug
 
                 elif mode == 3.0: # mode that you can directly publish cmd value (for develper mode.)
                     if self.prev_mode == 119.0:
@@ -176,6 +236,12 @@ class Move_ERP42(Node):
                     self.pub_brake(brake)
                     self.pub_steer(steer)
                     self.pub_gear(gear)
+                    self.prev_mode = msg.data[1]
+                    self.move_carmsg = msg.data #debug
+                    self.get_logger().info(f"{self.move_carmsg}") #dubug
+                    self.prev_error = 0
+                    self.error_i = 0
+                    self.prev_desired_vel = 0
 
                 elif mode == 4.0: # mode 1.0 + mode 3.0 (cruise control and direct publish except accel and brake)
                     if self.prev_mode == 119.0:
@@ -184,11 +250,57 @@ class Move_ERP42(Node):
                     gear = msg.data[6]
                     self.cruise_control(msg)
                     self.pub_steer(steer)
-                    self.pub_gear(gear)            
+                    self.pub_gear(gear)
+                    self.prev_mode = msg.data[1]
+                    self.move_carmsg = msg.data #debug
+                    self.get_logger().info(f"{self.move_carmsg}") #dubug
 
-                elif mode == 5.0: # cruise control without
-                    pass
-                
+                elif mode == 5.0: # navigation pilot mode
+                    if self.nav_pilot_switch == 0: #switch off
+                      pass  
+
+                    elif self.nav_pilot_switch ==1:                    
+                        if self.prev_mode == 119.0:
+                            self.emergency_stop_off()
+                        steer = msg.data[5]
+                        gear = msg.data[6]
+                        self.tartget_speed = msg.data[2]
+                        if self.tartget_speed > 5.0:
+                            self.mode_data[0] = 5.0
+                            self.pub_accel(self.tartget_speed)
+                            self.prev_error = 0
+                            self.error_i = 0
+                            self.prev_desired_vel = 0
+                        elif self.tartget_speed <= 5.0:
+                            self.cruise_control(msg)
+
+                        self.pub_steer(steer)
+                        self.pub_gear(gear)
+                        self.temp_nav_pilotmsg = msg.data                   
+                        self.prev_mode = msg.data[1]
+                        self.move_carmsg = msg.data #debug
+                        self.get_logger().info(f"{self.move_carmsg}") #dubug
+
+                elif self.nav_pilot_switch == 1 and mode == 6.0: # mission manager mode - decrease velocity!
+                    if self.prev_mode == 119.0:
+                        self.emergency_stop_off()
+                    steer = self.temp_nav_pilotmsg[5]
+                    gear = self.temp_nav_pilotmsg[6]
+                    self.tartget_speed = msg.data[2]
+                    if self.tartget_speed > 5.0:
+                        self.mode_data[0] = 6.0
+                        self.pub_accel(self.tartget_speed)
+                        self.prev_error = 0
+                        self.error_i = 0
+                        self.prev_desired_vel = 0
+                    elif self.tartget_speed <= 5.0:
+                        self.cruise_control(msg)
+
+                    self.pub_steer(steer)
+                    self.pub_gear(gear) 
+                    self.prev_mode = msg.data[1]
+                    self.move_carmsg = msg.data #debug
+                    self.get_logger().info(f"{self.move_carmsg}") #dubug                
 
         elif self.prev_mode == 0.0:
 
@@ -208,7 +320,7 @@ class Move_ERP42(Node):
         if topic == topic_list[0]:
             val = int(val)
             if not 0 <= val <= 200:
-                raise ValueError(f"your val for accel, {val} is out of range.")
+                self.get_logger().info(f"your val for accel, {val} is out of range.")
             accel = Int16()
             accel.data = val
             self.accelPub.publish(accel)
@@ -216,7 +328,7 @@ class Move_ERP42(Node):
         elif topic == topic_list[1]:
             val = int(val)
             if not 0 <= val <= 200:
-                raise ValueError(f"your val for brake, {val} is out of range.")
+                self.get_logger().info(f"your val for brake, {val} is out of range.")
             brake = Int16()
             brake.data = val
             self.brakePub.publish(brake)
@@ -224,16 +336,16 @@ class Move_ERP42(Node):
         elif topic == topic_list[2]:
             val = int(val)
             if not -2000 <= val <= 2000:
-                raise ValueError(f"your val for steer, {val} is out of range.")
+                self.get_logger().info(f"your val for steer, {val} is out of range.")
             steer = Int16()
             steer.data = val
             self.steerPub.publish(steer)
 
         elif topic == topic_list[3]:
             val = int(val)
-            gear_dict = {0:"Forward",5:"Neutral",2:"Backward"}            
+            gear_dict = {0:"Forward",1:"Neutral",2:"Backward"}            
             if val not in gear_dict:
-                raise ValueError(f"your val for gear, {val} is not valid.")
+                self.get_logger().info(f"your val for gear, {val} is not valid.")
             gear = Int16()
             gear.data = val
             self.gearPub.publish(gear)
@@ -242,7 +354,7 @@ class Move_ERP42(Node):
             val = int(val)
             status_dict = {0:"Manual",1:"Auto"} #default is manual            
             if val not in status_dict:
-                raise ValueError(f"your val for status, {val} is not valid.")
+                self.get_logger().info(f"your val for status, {val} is not valid.")
             status = Int16()
             status.data = val
             self.statusPub.publish(status)
@@ -251,13 +363,10 @@ class Move_ERP42(Node):
             val = int(val)
             estop_dict = {0:"E-Stop Off",1:"E-Stop ON"} #default is E-Stop Off            
             if val not in estop_dict:
-                raise ValueError(f"your val for estop, {val} is not valid.")
+                self.get_logger().info(f"your val for estop, {val} is not valid.")
             estop = Int16()
             estop.data = val
             self.estopPub.publish(estop)
-
-        else:
-            raise ValueError("your topic input is not valid.")
 
     #Functional ERP42 cmd publishers
     def pub_accel(self, val):
@@ -291,7 +400,7 @@ class Move_ERP42(Node):
     #mode 1. Cruise Control
     def PID(self,desired_vel):
 
-        if desired_vel == -1.0:
+        if desired_vel == -1.0 and self.prev_desired_Vel != -2.0:
             desired_vel = self.prev_desired_vel
         
         # When desired velocity is changed, prev_error and error_i should be reset! 
@@ -309,7 +418,6 @@ class Move_ERP42(Node):
         # Calculate Errors
         self.error_p = desired_vel - self.cur_vel
         self.error_i += self.error_p * (self.del_time)
-        time.sleep(0.005)
         if (self.error_i < - self.antiwindup):
             self.error_i = - self.antiwindup
         elif (self.error_i > self.antiwindup):
@@ -319,38 +427,35 @@ class Move_ERP42(Node):
         # PID Out
         pid_out = self.kp*self.error_p + self.ki*self.error_i + self.kd*self.error_d
         self.pid_out = pid_out
+
+        '''
         if pid_out > 1000:
             pid_out = 1000
         elif pid_out < -1000:
             pid_out = -1000
+        '''
 
         self.prev_error = self.error_p # Feedback current error
         self.prev_time = self.cur_time # Feedback current time
-        '''
-        if pid_out > 0:
-            for i in range(858):
-                if i <= pid_out < i+1:
-                    gaspedal = 800 + 10*i
-                    if gaspedal >= 3000:
-                        gaspedal = 3000
-                        return gaspedal, 0
-                    else:
-                        return gaspedal, 0
-        '''        
-
+ 
     	# accel_max - accel_dead_zone = 200 - 0 = 200
     	# 2200/10 = 220, 220 + 1 = 221
         if pid_out > 0:
             for i in range(2001):
-                if i <= pid_out < i+1:
-                    return 7*i, 0
+               if i <= 0.5*pid_out < i+1:
+                    gaspedal = 5*i
+                    if gaspedal >= 200:
+                        gaspedal = 200
+                        return int(gaspedal), 0
+                    else:
+                        return int(gaspedal), 0
 
     	# brake_max - brake_dead_zone = 200 - 0 = 200
     	# 23500/10 = 2350, 2350 + 1 = 2351
         elif pid_out < 0:
             for i in range(2001):
-                if i <= abs(pid_out) < i+1:
-                    return 0, 7*i
+                if i <= 0.5*abs(pid_out) < i+1:
+                    return 0, 5*i
 
         return 0, 0
 
