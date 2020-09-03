@@ -1,0 +1,1490 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' upload='false' generator='JOSM'>
+  <node id='-649503' lat='35.70267863086' lon='128.46648854709'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR068001' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20191103' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649504' lat='35.69920633459' lon='128.46892996368'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR068002' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20191103' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649505' lat='35.70080153661' lon='128.46809647662'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR068010' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191103' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649506' lat='35.7008365261' lon='128.46814484702'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR068011' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20191103' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649543' lat='35.70053710813' lon='128.46759080605'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068430' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649544' lat='35.70053590349' lon='128.46773464115'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068431' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649545' lat='35.70065690577' lon='128.46811562282'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068432' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649546' lat='35.70098328102' lon='128.4679215903'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068433' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649547' lat='35.70116138545' lon='128.46780527457'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068434' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649548' lat='35.70074692704' lon='128.46752288545'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068447' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649549' lat='35.7009053743' lon='128.46752184681'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068449' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649550' lat='35.70266760911' lon='128.46639621957'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068450' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649552' lat='35.7001558941' lon='128.46685079642'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068623' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649553' lat='35.70053664655' lon='128.46712670301'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068624' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649554' lat='35.70069505117' lon='128.46746109464'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068625' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649555' lat='35.70048706937' lon='128.46778325846'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068626' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649575' lat='35.6978136073' lon='128.4694557353'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069012' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649576' lat='35.69903469646' lon='128.4691380591'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069013' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649577' lat='35.69902482207' lon='128.46904357157'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069014' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649578' lat='35.69899497486' lon='128.46896026003'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069015' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649579' lat='35.69894771988' lon='128.46889044421'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069016' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649580' lat='35.69956826937' lon='128.46868722227'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069017' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649581' lat='35.69997674649' lon='128.46814928763'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069018' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649582' lat='35.7011958708' lon='128.46776789103'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069019' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649583' lat='35.70109281421' lon='128.46738646656'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069020' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649584' lat='35.70141626294' lon='128.46761293112'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069021' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649585' lat='35.70155914892' lon='128.4675103943'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069022' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649586' lat='35.70205320334' lon='128.46711574899'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069023' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649587' lat='35.70268600225' lon='128.46658589907'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069024' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649588' lat='35.70283550411' lon='128.46660909039'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069025' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649589' lat='35.70346305897' lon='128.46631657347'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069026' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649590' lat='35.70101894053' lon='128.46755077298'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069121' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-649610' lat='35.70092665111' lon='128.46808531049'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR069204' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191105' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650042' lat='35.70443476845' lon='128.46093067382'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR068008' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20191103' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650043' lat='35.69849246293' lon='128.45811519633'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR068009' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20191103' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650050' lat='35.69847986446' lon='128.45796472921'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068041' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650081' lat='35.69790573361' lon='128.46072635905'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068307' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650082' lat='35.69784137569' lon='128.46089438551'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068308' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650176' lat='35.698385033' lon='128.45789519381'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068420' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650177' lat='35.69843700599' lon='128.45761124657'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068421' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650178' lat='35.69850437439' lon='128.46056739254'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068422' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650179' lat='35.69847032345' lon='128.46069180529'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068423' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650180' lat='35.69841646617' lon='128.46088922088'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068424' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650181' lat='35.69850328887' lon='128.46097701827'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068425' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650182' lat='35.69870807534' lon='128.4635083887'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068426' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650183' lat='35.69867332951' lon='128.46365006298'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068427' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650184' lat='35.69868768982' lon='128.46390511617'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068428' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650185' lat='35.69880926456' lon='128.46392627991'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068429' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650186' lat='35.69848903975' lon='128.45749126717'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068435' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650187' lat='35.69871456028' lon='128.45756692277'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068436' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650188' lat='35.69880476166' lon='128.45763964724'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068438' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650189' lat='35.69875334694' lon='128.45789498945'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068439' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650190' lat='35.69870915213' lon='128.45802994922'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068440' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650191' lat='35.69874843385' lon='128.46063586846'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068441' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650192' lat='35.69873895249' lon='128.46088196785'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068442' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650193' lat='35.69872303593' lon='128.46103954004'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068443' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650194' lat='35.69893646396' lon='128.46350469529'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068444' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650195' lat='35.6990137078' lon='128.46377241075'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068445' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650196' lat='35.69904823932' lon='128.46388524915'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068446' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20180430' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650197' lat='35.70399180911' lon='128.46118450557'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068463' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650198' lat='35.70503436545' lon='128.46007320445'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068464' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650199' lat='35.70519715835' lon='128.45980057855'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068465' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650200' lat='35.70535412421' lon='128.4597772417'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068466' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650201' lat='35.70556744003' lon='128.45942662184'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068467' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650202' lat='35.70551287399' lon='128.45929391567'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068468' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650203' lat='35.70571330535' lon='128.45917467894'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068469' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650204' lat='35.70602891353' lon='128.45860416808'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068470' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650205' lat='35.70691009762' lon='128.45852170472'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068471' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650206' lat='35.70749936345' lon='128.4573151257'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068472' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650207' lat='35.70761205865' lon='128.45715577424'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068473' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650208' lat='35.7076923659' lon='128.45678091092'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068474' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650209' lat='35.70765074021' lon='128.45660538606'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068475' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650210' lat='35.70787017665' lon='128.45594007628'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068476' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650211' lat='35.70788586757' lon='128.45549970893'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068477' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650212' lat='35.70796110406' lon='128.45551292282'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068478' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650213' lat='35.70798348857' lon='128.45503594286'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068479' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650214' lat='35.70806404347' lon='128.4550267744'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068480' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650215' lat='35.70820331261' lon='128.45437142763'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068481' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650216' lat='35.70812293126' lon='128.45438138525'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068482' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650217' lat='35.70814950457' lon='128.45426201449'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068483' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650218' lat='35.7082223634' lon='128.45427912933'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068484' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650219' lat='35.70830132911' lon='128.4535396839'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068485' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650220' lat='35.70169624215' lon='128.4589084863'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068486' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650221' lat='35.70192657666' lon='128.46039844925'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068487' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650222' lat='35.70215086492' lon='128.4607097178'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068488' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650223' lat='35.70405792276' lon='128.46103091794'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068489' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650224' lat='35.70428078379' lon='128.46090631779'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068490' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650225' lat='35.70430978662' lon='128.46088611371'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068491' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650226' lat='35.70431815742' lon='128.46088152747'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068492' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650227' lat='35.70769605208' lon='128.45276284528'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068493' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650228' lat='35.70758487004' lon='128.45282352854'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068494' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650229' lat='35.70693334167' lon='128.45261523982'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068495' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650230' lat='35.70684887838' lon='128.45258891692'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068496' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650231' lat='35.70650587799' lon='128.45238387582'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068497' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650232' lat='35.70639037964' lon='128.45244265529'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068498' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650233' lat='35.70627117314' lon='128.4524042898'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068499' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650234' lat='35.70585342191' lon='128.45217469323'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068500' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650235' lat='35.70575903804' lon='128.45224118192'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068501' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650236' lat='35.70542066742' lon='128.45213231303'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068503' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650237' lat='35.70411386587' lon='128.45313965212'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068504' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650238' lat='35.70417501304' lon='128.45358472754'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068505' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650239' lat='35.70416415708' lon='128.45363828218'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068506' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650240' lat='35.70408257492' lon='128.45413573067'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068507' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650241' lat='35.70390514804' lon='128.45412872235'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068508' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650242' lat='35.70386117983' lon='128.45433943088'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068509' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650243' lat='35.70382504865' lon='128.45523418342'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068510' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650244' lat='35.70357209826' lon='128.45641778818'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068511' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650245' lat='35.70355257172' lon='128.45652637753'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068512' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650246' lat='35.70326255051' lon='128.45715598425'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068513' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650247' lat='35.70327776839' lon='128.45744575073'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068514' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650248' lat='35.7033692138' lon='128.45759981922'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068515' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650249' lat='35.70304767175' lon='128.45773270075'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068516' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650278' lat='35.69782634892' lon='128.45762640429'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068582' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650279' lat='35.69789131638' lon='128.45762978762'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068583' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650280' lat='35.69825347367' lon='128.45762653588'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068584' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650281' lat='35.69832681879' lon='128.45762832986'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068585' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650282' lat='35.69885574551' lon='128.45787170682'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068586' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650283' lat='35.69922534732' lon='128.45786377358'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068587' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650284' lat='35.69954573821' lon='128.45765497923'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068590' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650285' lat='35.70028704886' lon='128.45766510941'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068591' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650286' lat='35.7005340708' lon='128.45826408133'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068592' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650287' lat='35.70117531177' lon='128.45868659283'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068593' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650288' lat='35.70190298778' lon='128.45827459632'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068594' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650289' lat='35.70215951811' lon='128.45835266823'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068595' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650290' lat='35.70277598554' lon='128.45807947184'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068596' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650291' lat='35.70160378766' lon='128.45916756845'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068597' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650292' lat='35.70735886713' lon='128.45798183425'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068598' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650293' lat='35.70746119257' lon='128.45786735966'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068599' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650294' lat='35.70768229353' lon='128.45640235076'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068600' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650295' lat='35.70752150788' lon='128.45280290163'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068601' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650296' lat='35.70741868466' lon='128.45276978643'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068602' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650297' lat='35.70378889793' lon='128.45539902643'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068603' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650298' lat='35.69805790027' lon='128.45762994968'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068604' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650299' lat='35.69849234558' lon='128.45835229086'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068605' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650300' lat='35.69871202309' lon='128.45905729436'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068606' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650301' lat='35.69850052274' lon='128.45994075756'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068607' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650302' lat='35.69874595284' lon='128.46013032815'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068608' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650303' lat='35.69874574289' lon='128.46049970679'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068609' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650304' lat='35.69850750116' lon='128.46141785732'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068610' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650305' lat='35.6987488675' lon='128.46239807637'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068611' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650306' lat='35.69857080121' lon='128.46255903886'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068612' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650307' lat='35.69891302615' lon='128.46341296151'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068613' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650308' lat='35.69857243609' lon='128.46367299935'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068614' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650309' lat='35.69853570355' lon='128.46367273518'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068615' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650310' lat='35.69884982888' lon='128.46399556164'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068616' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650311' lat='35.69943998258' lon='128.46476319342'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068617' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650312' lat='35.6997025379' lon='128.46530966839'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068618' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650313' lat='35.69959064067' lon='128.46559839133'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068619' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650314' lat='35.69978089703' lon='128.46599834641'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068620' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650315' lat='35.70000456526' lon='128.46600381484'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068621' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650316' lat='35.69989439294' lon='128.46630205737'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068622' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650317' lat='35.70090703851' lon='128.45841564598'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068627' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650335' lat='35.6982228518' lon='128.46072499824'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR068645' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650336' lat='35.69840496969' lon='128.46072373007'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068646' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650338' lat='35.69887730892' lon='128.46408321569'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR068648' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650446' lat='35.6977941809' lon='128.46056455789'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069072' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650447' lat='35.69791808628' lon='128.46072720289'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069073' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650450' lat='35.70620165748' lon='128.45851371199'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069090' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650451' lat='35.69983615592' lon='128.4661217128'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069122' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650465' lat='35.7026367635' lon='128.46116959708'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069162' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650472' lat='35.70298169236' lon='128.45790061434'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069180' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650473' lat='35.70719518087' lon='128.45855931222'>
+    <tag k='AdminCode' v='157' />
+    <tag k='ID' v='C619AR069181' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650474' lat='35.69850767148' lon='128.46116965082'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6007' />
+    <tag k='ID' v='C619AR069182' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Remark' v='3Â÷°»½Å' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20181224' />
+    <tag k='Version' v='2019' />
+  </node>
+  <node id='-650476' lat='35.70548814382' lon='128.45215382721'>
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C6001' />
+    <tag k='ID' v='C619AR069202' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Type' v='2' />
+    <tag k='UpdateDate' v='20191105' />
+    <tag k='Version' v='2019' />
+  </node>
+</osm>

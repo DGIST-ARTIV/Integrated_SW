@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' upload='false' generator='JOSM'>
+  <node id='-649346' lat='35.68631034218' lon='128.46676873135' />
+  <node id='-649347' lat='35.68627810586' lon='128.4667598946' />
+  <node id='-649351' lat='35.68630200075' lon='128.46661781068' />
+  <node id='-649353' lat='35.68633461315' lon='128.46662605914' />
+  <node id='-649357' lat='35.68512784344' lon='128.46631222912' />
+  <node id='-649358' lat='35.68509905896' lon='128.46629494848' />
+  <node id='-649362' lat='35.68515425539' lon='128.46616653862' />
+  <node id='-649363' lat='35.68518305523' lon='128.46618321129' />
+  <node id='-649368' lat='35.68489003039' lon='128.4493487889' />
+  <node id='-649371' lat='35.68491973942' lon='128.44933310171' />
+  <node id='-649373' lat='35.68494259161' lon='128.44939331859' />
+  <node id='-649375' lat='35.68491282072' lon='128.44940928248' />
+  <node id='-649376' lat='35.69207113364' lon='128.46671332442' />
+  <node id='-649379' lat='35.69207095707' lon='128.46682001456' />
+  <node id='-649380' lat='35.69203859286' lon='128.46681893683' />
+  <node id='-649382' lat='35.69203827308' lon='128.46674674461' />
+  <node id='-649383' lat='35.69203848841' lon='128.46671393962' />
+  <node id='-649386' lat='35.70413721826' lon='128.45309313752' />
+  <node id='-649387' lat='35.70414028199' lon='128.45307686711' />
+  <node id='-649390' lat='35.70419369522' lon='128.45309492944' />
+  <node id='-649391' lat='35.70419050102' lon='128.45311225089' />
+  <node id='-649393' lat='35.70566451196' lon='128.45219568798' />
+  <node id='-649394' lat='35.70563273796' lon='128.45218562489' />
+  <node id='-649396' lat='35.70564605132' lon='128.45212539851' />
+  <node id='-649397' lat='35.70567773406' lon='128.45213521902' />
+  <node id='-649399' lat='35.70645677005' lon='128.45244730439' />
+  <node id='-649400' lat='35.70642550127' lon='128.45243730397' />
+  <node id='-649402' lat='35.70643765345' lon='128.45237747188' />
+  <node id='-649403' lat='35.70646897538' lon='128.45238726188' />
+  <node id='-649405' lat='35.7069781024' lon='128.45261459699' />
+  <node id='-649406' lat='35.70694605605' lon='128.45260411536' />
+  <node id='-649408' lat='35.70695979084' lon='128.45254333246' />
+  <node id='-649409' lat='35.7069920904' lon='128.45255397815' />
+  <node id='-649411' lat='35.70761703643' lon='128.45281824232' />
+  <node id='-649412' lat='35.70758685221' lon='128.45280880903' />
+  <node id='-649414' lat='35.70759946727' lon='128.45274762431' />
+  <node id='-649415' lat='35.70763091634' lon='128.45275762377' />
+  <node id='-649418' lat='35.70823082107' lon='128.4539346673' />
+  <node id='-649419' lat='35.70823903284' lon='128.45389646172' />
+  <node id='-649421' lat='35.70828887879' lon='128.45391326749' />
+  <node id='-649422' lat='35.70827975997' lon='128.45395226415' />
+  <node id='-649424' lat='35.70795944057' lon='128.4552118987' />
+  <node id='-649425' lat='35.70796756128' lon='128.45517340659' />
+  <node id='-649427' lat='35.70801723943' lon='128.45518903139' />
+  <node id='-649428' lat='35.70800924368' lon='128.45522724631' />
+  <node id='-649430' lat='35.70763497011' lon='128.45674327247' />
+  <node id='-649431' lat='35.70764300115' lon='128.45670478128' />
+  <node id='-649433' lat='35.70769242756' lon='128.45672060766' />
+  <node id='-649434' lat='35.70768412893' lon='128.45675974186' />
+  <node id='-649436' lat='35.70743747263' lon='128.45766771012' />
+  <node id='-649437' lat='35.70744571807' lon='128.45762870915' />
+  <node id='-649439' lat='35.70749530436' lon='128.45764402648' />
+  <node id='-649440' lat='35.70748696647' lon='128.45768251959' />
+  <node id='-649442' lat='35.70733128802' lon='128.45817013864' />
+  <node id='-649443' lat='35.70733953551' lon='128.45813155783' />
+  <node id='-649445' lat='35.70738880867' lon='128.45814743029' />
+  <node id='-649446' lat='35.70738083788' lon='128.4581853902' />
+  <node id='-649447' lat='35.70446432692' lon='128.46087501629' />
+  <node id='-649448' lat='35.7044330494' lon='128.46081460609' />
+  <node id='-649449' lat='35.70445971422' lon='128.46079330211' />
+  <node id='-649450' lat='35.70449182776' lon='128.46085315399' />
+  <way id='-142465' action='modify'>
+    <nd ref='-649346' />
+    <nd ref='-649347' />
+    <nd ref='-649351' />
+    <nd ref='-649353' />
+    <nd ref='-649346' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068013' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C042002' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142467' action='modify'>
+    <nd ref='-649357' />
+    <nd ref='-649358' />
+    <nd ref='-649362' />
+    <nd ref='-649363' />
+    <nd ref='-649357' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068014' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C042202' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142469' action='modify'>
+    <nd ref='-649368' />
+    <nd ref='-649371' />
+    <nd ref='-649373' />
+    <nd ref='-649375' />
+    <nd ref='-649368' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068015' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C003102' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142471' action='modify'>
+    <nd ref='-649376' />
+    <nd ref='-649379' />
+    <nd ref='-649380' />
+    <nd ref='-649382' />
+    <nd ref='-649383' />
+    <nd ref='-649376' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068012' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C512602' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142473' action='modify'>
+    <nd ref='-649386' />
+    <nd ref='-649387' />
+    <nd ref='-649390' />
+    <nd ref='-649391' />
+    <nd ref='-649386' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068001' />
+    <tag k='LinkID' v='A219AR068106' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='1' />
+    <tag k='Remark' v='157C528702' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142475' action='modify'>
+    <nd ref='-649393' />
+    <nd ref='-649394' />
+    <nd ref='-649396' />
+    <nd ref='-649397' />
+    <nd ref='-649393' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068002' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C530502' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142477' action='modify'>
+    <nd ref='-649399' />
+    <nd ref='-649400' />
+    <nd ref='-649402' />
+    <nd ref='-649403' />
+    <nd ref='-649399' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068003' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C530602' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142479' action='modify'>
+    <nd ref='-649405' />
+    <nd ref='-649406' />
+    <nd ref='-649408' />
+    <nd ref='-649409' />
+    <nd ref='-649405' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068004' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C530702' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142481' action='modify'>
+    <nd ref='-649411' />
+    <nd ref='-649412' />
+    <nd ref='-649414' />
+    <nd ref='-649415' />
+    <nd ref='-649411' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068005' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C530802' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142483' action='modify'>
+    <nd ref='-649418' />
+    <nd ref='-649419' />
+    <nd ref='-649421' />
+    <nd ref='-649422' />
+    <nd ref='-649418' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068006' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C530902' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142485' action='modify'>
+    <nd ref='-649424' />
+    <nd ref='-649425' />
+    <nd ref='-649427' />
+    <nd ref='-649428' />
+    <nd ref='-649424' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068007' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C053202' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142487' action='modify'>
+    <nd ref='-649430' />
+    <nd ref='-649431' />
+    <nd ref='-649433' />
+    <nd ref='-649434' />
+    <nd ref='-649430' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068008' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C531102' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142489' action='modify'>
+    <nd ref='-649436' />
+    <nd ref='-649437' />
+    <nd ref='-649439' />
+    <nd ref='-649440' />
+    <nd ref='-649436' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068009' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C531102' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142491' action='modify'>
+    <nd ref='-649442' />
+    <nd ref='-649443' />
+    <nd ref='-649445' />
+    <nd ref='-649446' />
+    <nd ref='-649442' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068010' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C531102' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+  <way id='-142493'>
+    <nd ref='-649447' />
+    <nd ref='-649448' />
+    <nd ref='-649449' />
+    <nd ref='-649450' />
+    <nd ref='-649447' />
+    <tag k='AdminCode' v='157' />
+    <tag k='HistType' v='C4007' />
+    <tag k='ID' v='C419AR068011' />
+    <tag k='Maker' v='»õÇÑÇ×¾÷ÄÁ¼Ò½Ã¾ö' />
+    <tag k='Ref_Lane' v='0' />
+    <tag k='Remark' v='157C531802' />
+    <tag k='Type' v='1' />
+    <tag k='UpdateDate' v='20191107' />
+    <tag k='Version' v='2019' />
+  </way>
+</osm>
