@@ -38,4 +38,4 @@ __MCmsg.data = [0.0,1.0,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]__
 
 [move_Ioniq 매뉴얼](https://docs.google.com/document/d/1AxAMeq6Xrgb8W50JrqpNWJELcRYVBZaxbXu9biplyvI/edit?usp=sharing)
 
-[move_ERP42 매뉴얼](https://hoya4764.gitbook.io/artiv-move-car/)
+[move_ERP42 매뉴얼](https://artiv.gitbook.io/artiv-move-car/)
