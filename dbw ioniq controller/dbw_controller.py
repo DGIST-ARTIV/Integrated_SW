@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+# dbw_controller
+# v2.1 with move_car
+#by shinkansan
 import rospy
 
 import os
@@ -18,7 +21,7 @@ import sys
 
 vtc = uic.loadUiType("vtc.ui")[0]
 
-NODENAME = "vehicle_controller"
+NODENAME = "dbw_ioniq_controller"
 rootname = '/dbw_cmd'
 
 pubAccel = '/Accel'

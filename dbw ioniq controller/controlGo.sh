@@ -1,2 +1,2 @@
-cd ~/startup/dbw_ioniq_controller
+cd ~/startup/dbw_controller
 python dbw_controller.py
