@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="pics"/>
+  <qresource prefix="newPrefix">
+    <file>67869616.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>kia-Advanced-Smart-Cruise-radar-dashboard-warning-light.jpg</file>
+  </qresource>
+</RCC>
