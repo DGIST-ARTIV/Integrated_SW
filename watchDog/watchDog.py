@@ -1,8 +1,3 @@
-# watchDog, ROS Log watcher
-# v2.1 (2020.09.13.)
-#By shinkansan
-
-
 import sys
 import os
 from PyQt5.QtWidgets import *
@@ -32,6 +27,7 @@ import time
 
 form_window = uic.loadUiType("logalert.ui")[0]
 alert_window = uic.loadUiType("alertScreen.ui")[0]
+FATAL_window = uic.loadUiType("fatalScreen.ui")[0]
 
 header_serverity = 0
 header_comment = 1
@@ -39,6 +35,7 @@ header_time = 2
 header_loc = 3
 blank_toggle = 1
 aSshow = 1
+fSshow = 1
 coppinShow = 1
 
 class Stack(list):
@@ -89,6 +86,7 @@ class coppin(QWidget):
         vboxLayout.addWidget(videowidget)
 
     def play(self):
+        # This is fake
         self.mediaPlayer.setMedia(QMediaContent(QUrl.fromLocalFile(os.path.join(os.getcwd(), "warning3.mp4"))))
         self.mediaPlayer.play()
 
@@ -102,18 +100,155 @@ class alertScreen(QMainWindow, alert_window):
         frameGm.moveCenter(centerPoint)
         self.move(frameGm.topLeft())
 
+    def location_on_the_screen(self):
+        screen = QDesktopWidget().screenGeometry()
+        widget = self.geometry()
+        x = screen.width() - widget.width()
+        #y = screen.height() - widget.height()
+        y = 30# widget.height()
+        self.move(x, y)
+
+
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.center()
+        #self.center()
+        self.location_on_the_screen()
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint)
         self.pushButton.clicked.connect(self._exit)
 
         self.playlist = QMediaPlaylist()
-        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./warning32.mp3"))
+        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./ChargingStarted_Calm.ogg"))
+        #url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./Water_Protection.ogg"))
+        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./TW_Silent_mode_off_Calm.ogg"))
         self.playlist.addMedia(QMediaContent(url))
 
-        self.timeout = 4000
+        self.timeout = 2500
+
+
+        self.setStyleSheet("background-color:  #efefef;"
+                      "border-style: solid;"
+                      "border-width: 9px;"
+                      "border-color: #ff4444;"
+                      "border-radius: 3px")
+
+        self.label_2.setStyleSheet("color: black;"
+                      "border-style: None;"
+                      "border-width: 2px;"
+                      "border-color: #FA8072;"
+                      "border-radius: 3px")
+
+        self.label.setStyleSheet("color: black;"
+                      "border-style: None;"
+                      "border-width: 2px;"
+                      "border-color: #FA8072;"
+                      "border-radius: 3px")
+
+        self.listWidget.setStyleSheet("color: balck;"
+                      "border-style: None;"
+                      "border-width: 2px;"
+                      "border-color: #000000;"
+                      "border-radius: 3px")
+        self.pushButton.setStyleSheet("color: balck;"
+                      "border-style: solid;"
+                      "border-width: 2px;"
+                      "border-color: #000000;"
+                      "border-radius: 3px")
+
+        timer = QtCore.QTimer(self)
+        timer.setInterval(400)
+        timer.timeout.connect(self.blank)
+        timer.start()
+
+        self.alertSound = QtCore.QTimer(self)
+        self.doAlert()
+        self.alertSound.timeout.connect(self.doAlert)
+        self.alertSound.start()
+        self.alertSound.setInterval(self.timeout)
+
+    def openCoppin(self):
+        pass
+
+
+    def blank(self):
+        global blank_toggle
+        if(blank_toggle):
+            self.setStyleSheet("background-color:  #efefef;"
+                          "border-style: solid;"
+                          "border-width: 20px;"
+                          "border-color: #2c698d;"
+                          "border-radius: 2px")
+            blank_toggle = 0
+        else:
+            self.setStyleSheet("background-color:  #efefef;"
+                          "border-style: solid;"
+                          "border-width: 20px;"
+                          "border-color: #bae8e8;"
+                          "border-radius: 2px")
+            blank_toggle = 1
+        self.updateList()
+
+    def doAlert(self):
+        self.player = QMediaPlayer()
+        self.player.setPlaylist(self.playlist)
+        self.player.play()
+        #if self.timeout > 300 : self.timeout -= 50
+        self.alertSound.setInterval(self.timeout)
+
+
+    def updateList(self):
+        global fatalList, coppinShow
+        if fatalList:
+            if fatalList.peek()[2] != "WARNING": return # alert : pass the FATAL
+            item = fatalList.pop()
+            self.listWidget.addItem(str(item[1]) + " : " + str(item[3]))
+        if self.listWidget.count() > 4 and coppinShow == 1:
+            self.openCoppin()
+            coppinShow = 0
+
+
+    def _exit(self):
+        global aSshow
+
+        aSshow = 1
+        logAlert_form.alarmTimeout()
+        self.player.stop()
+        self.alertSound.stop()
+        self.hide()
+
+class FATALScreen(QMainWindow, FATAL_window):
+
+    def center(self): #for load ui at center of screen
+        frameGm = self.frameGeometry()
+        screen = PyQt5.QtWidgets.QApplication.desktop().screenNumber(PyQt5.QtWidgets.QApplication.desktop().cursor().pos())
+        centerPoint = PyQt5.QtWidgets.QApplication.desktop().screenGeometry(screen).center()
+        frameGm.moveCenter(centerPoint)
+        self.move(frameGm.topLeft())
+
+    def location_on_the_screen(self):
+        screen = QDesktopWidget().screenGeometry()
+        widget = self.geometry()
+        x = screen.width() - widget.width()
+        #y = screen.height() - widget.height()
+        y = 170# widget.height()
+        self.move(x, y)
+
+
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        #self.center()
+        self.location_on_the_screen()
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint)
+        self.pushButton.clicked.connect(self._exit)
+
+        self.playlist = QMediaPlaylist()
+        #url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./ChargingStarted_Calm.ogg"))
+        #url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./Water_Protection.ogg"))
+        url = C.QUrl.fromLocalFile(os.path.join(os.getcwd(), "./Alert_on_call.ogg"))
+        self.playlist.addMedia(QMediaContent(url))
+
+        self.timeout = 1000
 
 
         self.setStyleSheet("background-color:  #efefef;"
@@ -182,11 +317,14 @@ class alertScreen(QMainWindow, alert_window):
         self.player = QMediaPlayer()
         self.player.setPlaylist(self.playlist)
         self.player.play()
+        #if self.timeout > 300 : self.timeout -= 50
+        self.alertSound.setInterval(self.timeout)
 
 
     def updateList(self):
         global fatalList, coppinShow
         if fatalList:
+            if fatalList.peek()[2] == "WARNING" : return
             item = fatalList.pop()
             self.listWidget.addItem(str(item[1]) + " : " + str(item[3]))
         if self.listWidget.count() > 4 and coppinShow == 1:
@@ -195,12 +333,12 @@ class alertScreen(QMainWindow, alert_window):
 
 
     def _exit(self):
-        global aSshow
-        aSshow = 1
+        global fSshow
+        fSshow = 1
+        logAlert_form.alarmTimeout()
         self.player.stop()
         self.alertSound.stop()
         self.hide()
-
 
 
 class logAlert(QMainWindow, form_window):
@@ -274,8 +412,8 @@ class logAlert(QMainWindow, form_window):
     def logUpdate(self, _data):
         #print(self.dataPop)
         try:
-            if self.dataPop[-1][0] == 16 or self.dataPop[-1][0] == 50 and self.dataPop[-1][3] == _data[3]:
-                print("Skip same FATAL", self.dataPop[-1][2], _data[3], _data[2])
+            if self.dataPop[-1][0] == 16 or self.dataPop[-1][0] == 50 or self.dataPop[-1][0] == 30 or self.dataPop[-1][0] == 8  or self.dataPop[-1][0] == 40 or self.dataPop[-1][0] == 4 and self.dataPop[-1][3] == _data[3]:
+                print("Skip same Warn", self.dataPop[-1][2], _data[3], _data[2])
                 return
         except:
             pass
@@ -313,6 +451,7 @@ class logAlert(QMainWindow, form_window):
             pass
 
     def snoozeAlarm(self):
+
         if self.pushButton.text() == "Alarm : ON":
             self.pushButton.setText("Alarm : OFF")
             self.snoozeBool = True
@@ -320,26 +459,58 @@ class logAlert(QMainWindow, form_window):
             self.pushButton.setText("Alarm : ON")
             self.snoozeBool = False
 
+
+
+    def offAlarm(self):
+        self.pushButton.setText("Alarm : OFF")
+        self.snoozeBool = True
+
+    def onAlarm(self):
+        self.pushButton.setText("Alarm : ON")
+        self.snoozeBool = False
+    def alarmTimeout(self):
+
+        if self.pushButton.text == "Alarm : OFF":
+            return
+        self.offAlarm()
+        QTimer.singleShot(10000, lambda: self.onAlarm())
+
+
+
+
     def showAlert(self, _data):
         if _data[0] == 16 or _data[0] == 50:
             _data[2] = "FATAL"
         elif _data[0] == 8 or _data[0] == 40:
             _data[2] = "ERROR"
+        elif _data[0] == 4 or _data[0] == 30:
+            _data[2] = "WARNING"
 
         if not self.snoozeBool:
             #print(_data[2], _data[0])
             if _data[2] == "FATAL" or _data[2] == "ERROR":
+                global fSshow
+                self.fatalCollector(_data)
+                if fSshow:
+
+                    self.aS2 = FATALScreen()
+                    self.aS2.show()
+                    fSshow = 0
+
+            if _data[2] == "WARNING":
                 global aSshow
                 self.fatalCollector(_data)
                 if aSshow:
 
                     self.aS = alertScreen()
                     self.aS.show()
+
                     aSshow = 0
     def addRowandSet(self, _data):
         # fileter for passing "INFO"
 
         global aSshow
+        global fSshow
 
         serverity = self.putIcon(_data[0])[1]
         _data[2] = serverity

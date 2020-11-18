@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>598</width>
-    <height>130</height>
+    <width>718</width>
+    <height>207</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,10 +44,10 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>-10</y>
+      <x>570</x>
+      <y>-20</y>
       <width>151</width>
-      <height>151</height>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
@@ -73,9 +73,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>60</y>
-      <width>371</width>
-      <height>41</height>
+      <y>110</y>
+      <width>531</width>
+      <height>61</height>
      </rect>
     </property>
    </widget>
@@ -83,9 +83,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>371</width>
-      <height>41</height>
+      <y>30</y>
+      <width>421</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
@@ -94,7 +94,7 @@
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; color:#3465a4;&quot;&gt;CAUTION (Level 2)&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; color:#cc0000;&quot;&gt;FATAL Warning! (Level 3)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;운전자 개입이 필요합니다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
