@@ -75,7 +75,7 @@
       <x>20</x>
       <y>60</y>
       <width>371</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
    </widget>
@@ -94,7 +94,7 @@
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; color:#3465a4;&quot;&gt;CAUTION (Level 2)&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; color:#3465a4;&quot;&gt;CAUTION (NOTICE)&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

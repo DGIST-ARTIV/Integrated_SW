@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>857</width>
-    <height>324</height>
+    <width>349</width>
+    <height>76</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Log Alert</string>
+   <string>ARTIV WatchDog</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -21,10 +21,10 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>629</x>
-      <y>20</y>
-      <width>211</width>
-      <height>91</height>
+      <x>240</x>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -36,35 +36,22 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>601</width>
-      <height>281</height>
+      <width>131</width>
+      <height>31</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>629</x>
-      <y>130</y>
-      <width>211</width>
-      <height>51</height>
+      <x>160</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string>Clear</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>200</y>
-      <width>211</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Test Alarm</string>
     </property>
    </widget>
   </widget>
@@ -73,7 +60,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>857</width>
+     <width>349</width>
      <height>22</height>
     </rect>
    </property>

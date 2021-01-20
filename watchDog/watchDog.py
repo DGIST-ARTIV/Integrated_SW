@@ -58,6 +58,10 @@ class alertSound(QThread):
     def run(self):
 '''
 
+
+maskText = ['Type1', 'Type2', 'Type3', 'Type4', 'poll()']
+
+
 class coppin(QWidget):
     def __init__(self):
         QWidget.__init__(self)
@@ -199,7 +203,7 @@ class alertScreen(QMainWindow, alert_window):
     def updateList(self):
         global fatalList, coppinShow
         if fatalList:
-            if fatalList.peek()[2] != "WARNING": return # alert : pass the FATAL
+            if fatalList.peek()[2] != "ERROR": return # alert : pass the FATAL
             item = fatalList.pop()
             self.listWidget.addItem(str(item[1]) + " : " + str(item[3]))
         if self.listWidget.count() > 4 and coppinShow == 1:
@@ -324,7 +328,7 @@ class FATALScreen(QMainWindow, FATAL_window):
     def updateList(self):
         global fatalList, coppinShow
         if fatalList:
-            if fatalList.peek()[2] == "WARNING" : return
+            if fatalList.peek()[2] != "FATAL": return
             item = fatalList.pop()
             self.listWidget.addItem(str(item[1]) + " : " + str(item[3]))
         if self.listWidget.count() > 4 and coppinShow == 1:
@@ -406,7 +410,7 @@ class logAlert(QMainWindow, form_window):
     def displayUpdate(self):
         for its in self.dataPop:
             time.sleep(0.001)
-            self.addRowandSet(its)
+            #self.addRowandSet(its)
         self.dataPop = []
 
     def logUpdate(self, _data):
@@ -486,9 +490,13 @@ class logAlert(QMainWindow, form_window):
         elif _data[0] == 4 or _data[0] == 30:
             _data[2] = "WARNING"
 
+        if _data[1].split(" ")[0] in maskText:
+            #
+            print("ARTIV FATAL Collected")
+
         if not self.snoozeBool:
             #print(_data[2], _data[0])
-            if _data[2] == "FATAL" or _data[2] == "ERROR":
+            if _data[2] == "FATAL":
                 global fSshow
                 self.fatalCollector(_data)
                 if fSshow:
@@ -497,8 +505,9 @@ class logAlert(QMainWindow, form_window):
                     self.aS2.show()
                     fSshow = 0
 
-            if _data[2] == "WARNING":
+            if _data[2] == "ERROR":
                 global aSshow
+                #print(_data)
                 self.fatalCollector(_data)
                 if aSshow:
 
